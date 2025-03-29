@@ -1,4 +1,6 @@
+using PPJam.Player;
 using PPJam.SO;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -19,11 +21,29 @@ namespace PPJam.Payer
 
         private Vector2 _mov;
 
+        private List<IInteractable> _interactions = new();
+
         private void Awake()
         {
             _controller = GetComponent<CharacterController>();
 
             Cursor.lockState = CursorLockMode.Locked;
+
+            var tArea = GetComponentInChildren<TriggerArea>();
+            tArea.OnTriggerEnterEvent.AddListener((Collider c) =>
+            {
+                if (c.TryGetComponent<IInteractable>(out var i))
+                {
+                    _interactions.Add(i);
+                }
+            });
+            tArea.OnTriggerExitEvent.AddListener((Collider c) =>
+            {
+                if (c.gameObject.TryGetComponent<IInteractable>(out var i))
+                {
+                    _interactions.RemoveAll(x => x.GameObject.GetInstanceID() == i.GameObject.GetInstanceID());
+                }
+            });
         }
 
         private void Update()
@@ -87,6 +107,11 @@ namespace PPJam.Payer
         public void OnSprint(InputAction.CallbackContext value)
         {
             _isSprinting = value.ReadValueAsButton();
+        }
+
+        public void OnInteract(InputAction.CallbackContext value)
+        {
+
         }
     }
 }
