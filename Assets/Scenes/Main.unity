@@ -2732,6 +2732,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _notificationContainer: {fileID: 1553710458}
   _notificationPrefab: {fileID: 7508594192884897720, guid: e9f49f54775851140a0943d8a5963016, type: 3}
+  _breakTimeMin: 2
+  _breakTimeMax: 5
 --- !u!4 &1438527289
 Transform:
   m_ObjectHideFlags: 0

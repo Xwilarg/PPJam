@@ -25,12 +25,18 @@ namespace PPJam.Machine
         public void Interact(PlayerController pc)
         {
             _isBroken = false;
+            GameManager.Instance.Repair(_info.Name);
             pc.EmptyHands();
         }
 
         private void Start()
         {
             GameManager.Instance.Register(this);
+        }
+
+        public void Break()
+        {
+            _isBroken = true;
         }
     }
 }

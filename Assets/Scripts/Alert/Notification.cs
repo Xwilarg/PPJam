@@ -29,7 +29,8 @@ namespace PPJam.Alert
 
             if (_timer <= 0f)
             {
-                Destroy(gameObject);
+                Debug.LogWarning("Player lost!");
+                Debug.Break();
             }
         }
     }

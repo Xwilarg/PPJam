@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Water
   m_EditorClassIdentifier: 
   Name: Water
-  Timer: 5
+  Timer: 30
   Icon: {fileID: 21300000, guid: b8540148675738b49b8fca0623353581, type: 3}
