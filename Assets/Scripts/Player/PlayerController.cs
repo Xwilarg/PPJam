@@ -2,7 +2,6 @@ using PPJam.Player;
 using PPJam.SO;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -12,6 +11,8 @@ namespace PPJam.Payer
     {
         public GameObject GameObject;
         public ObjectType Type;
+
+        public string RepairKey;
     }
 
     public enum ObjectType

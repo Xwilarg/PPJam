@@ -6,6 +6,9 @@ using UnityEngine;
 
 namespace PPJam.Machine
 {
+    /// <summary>
+    /// Send drones, start a timer and once it's done the player can come get the repair part for the <seealso cref="EnergyMachine"/>
+    /// </summary>
     public class TubeSendingMachine : MonoBehaviour, IInteractable
     {
         [SerializeField]
@@ -45,7 +48,8 @@ namespace PPJam.Machine
                 pc.CarriedObject = new()
                 {
                     GameObject = Instantiate(_repairPartPrefab),
-                    Type = ObjectType.Repair
+                    Type = ObjectType.Repair,
+                    RepairKey = _associatedMachine.Info.Name
                 };
             }
             else throw new System.NotImplementedException();

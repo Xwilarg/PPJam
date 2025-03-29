@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace PPJam.Machine
 {
+    /// <summary>
+    /// Get drones for the <seealso cref="TubeSendingMachine"/>
+    /// </summary>
     public class DroneMachine : MonoBehaviour, IInteractable
     {
         [SerializeField]

@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace PPJam.Machine
 {
+    /// <summary>
+    /// Allow for player to discard an object in his hands
+    /// </summary>
     public class TrashMachine : MonoBehaviour, IInteractable
     {
         public GameObject GameObject => gameObject;
