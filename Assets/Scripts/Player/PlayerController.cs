@@ -1,6 +1,8 @@
 using PPJam.Player;
 using PPJam.SO;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -111,7 +113,10 @@ namespace PPJam.Payer
 
         public void OnInteract(InputAction.CallbackContext value)
         {
-
+            if (value.phase == InputActionPhase.Started && _interactions.Any() && _interactions[0].CanInteract)
+            {
+                _interactions[0].Interact(this);
+            }
         }
     }
 }
