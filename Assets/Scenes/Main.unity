@@ -3023,6 +3023,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1035235274}
     - target: {fileID: 1760049906119490466, guid: 8dee7df65639e8946811c90f71c86a75, type: 3}
+      propertyPath: _timerTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1760049906119490466, guid: 8dee7df65639e8946811c90f71c86a75, type: 3}
+      propertyPath: _repairPartPrefab
+      value: 
+      objectReference: {fileID: 7967368055829844819, guid: b3104cc296a475248a8fe9c8991f2f59, type: 3}
+    - target: {fileID: 1760049906119490466, guid: 8dee7df65639e8946811c90f71c86a75, type: 3}
       propertyPath: _associatedMachine
       value: 
       objectReference: {fileID: 1641262903}
@@ -3072,7 +3080,7 @@ PrefabInstance:
       objectReference: {fileID: 1035235274}
     - target: {fileID: 4903782155577124932, guid: 8dee7df65639e8946811c90f71c86a75, type: 3}
       propertyPath: m_VersionIndex
-      value: 3856
+      value: 3859
       objectReference: {fileID: 0}
     - target: {fileID: 5591964724857917328, guid: 8dee7df65639e8946811c90f71c86a75, type: 3}
       propertyPath: m_Name
