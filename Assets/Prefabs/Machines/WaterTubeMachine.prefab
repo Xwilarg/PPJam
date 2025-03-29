@@ -247,7 +247,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3832
+  m_VersionIndex: 3853
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -426,6 +426,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sendTimerText: {fileID: 4953853980640459755}
+  _associatedMachine: {fileID: 0}
+  _timerTime: 30
 --- !u!1 &6631980651209336286
 GameObject:
   m_ObjectHideFlags: 0

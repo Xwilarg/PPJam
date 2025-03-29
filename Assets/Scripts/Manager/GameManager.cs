@@ -15,7 +15,7 @@ namespace PPJam.Manager
         [SerializeField]
         private GameObject _notificationPrefab;
 
-        private List<EnergyMachine> _machines = new();
+        private readonly List<EnergyMachine> _machines = new();
 
         private void Awake()
         {

@@ -2686,6 +2686,17 @@ Transform:
   - {fileID: 850900957}
   m_Father: {fileID: 607082350}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1641262903 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 997874801744896669, guid: 30f3e82e62b60794f88c1a9764a2607d, type: 3}
+  m_PrefabInstance: {fileID: 8167345208504713780}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a89b0e119b65467478c68fed526784ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1958891344
 GameObject:
   m_ObjectHideFlags: 0
@@ -2988,7 +2999,7 @@ PrefabInstance:
       objectReference: {fileID: 143273173}
     - target: {fileID: 8569530073250731820, guid: 0da962198d840b9489662c22cb6d0c0c, type: 3}
       propertyPath: m_VersionIndex
-      value: 3829
+      value: 3835
       objectReference: {fileID: 0}
     - target: {fileID: 8667233081760932296, guid: 0da962198d840b9489662c22cb6d0c0c, type: 3}
       propertyPath: m_Mesh
@@ -3011,6 +3022,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1035235274}
+    - target: {fileID: 1760049906119490466, guid: 8dee7df65639e8946811c90f71c86a75, type: 3}
+      propertyPath: _associatedMachine
+      value: 
+      objectReference: {fileID: 1641262903}
     - target: {fileID: 3183035106636749397, guid: 8dee7df65639e8946811c90f71c86a75, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6
@@ -3057,7 +3072,7 @@ PrefabInstance:
       objectReference: {fileID: 1035235274}
     - target: {fileID: 4903782155577124932, guid: 8dee7df65639e8946811c90f71c86a75, type: 3}
       propertyPath: m_VersionIndex
-      value: 3835
+      value: 3856
       objectReference: {fileID: 0}
     - target: {fileID: 5591964724857917328, guid: 8dee7df65639e8946811c90f71c86a75, type: 3}
       propertyPath: m_Name
@@ -3071,17 +3086,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 8dee7df65639e8946811c90f71c86a75, type: 3}
---- !u!114 &8083439135928344303 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1760049906119490466, guid: 8dee7df65639e8946811c90f71c86a75, type: 3}
-  m_PrefabInstance: {fileID: 8083439135928344302}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b81ed64fbeeb40499dbdf180b68c860, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &8167345208504713780
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3094,10 +3098,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaterMachine
       objectReference: {fileID: 0}
-    - target: {fileID: 997874801744896669, guid: 30f3e82e62b60794f88c1a9764a2607d, type: 3}
-      propertyPath: _associatedMachine
-      value: 
-      objectReference: {fileID: 8083439135928344303}
     - target: {fileID: 1401306072177654877, guid: 30f3e82e62b60794f88c1a9764a2607d, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -3108,7 +3108,7 @@ PrefabInstance:
       objectReference: {fileID: 858201944}
     - target: {fileID: 2619471861061581891, guid: 30f3e82e62b60794f88c1a9764a2607d, type: 3}
       propertyPath: m_VersionIndex
-      value: 3829
+      value: 3838
       objectReference: {fileID: 0}
     - target: {fileID: 2876861755517985901, guid: 30f3e82e62b60794f88c1a9764a2607d, type: 3}
       propertyPath: m_LocalPosition.x

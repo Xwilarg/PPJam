@@ -96,7 +96,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _info: {fileID: 11400000, guid: f82b7a811e8e8ca46ad2f9a738d5040b, type: 2}
-  _associatedMachine: {fileID: 0}
 --- !u!1 &2176596406079115495
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,7 +343,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3826
+  m_VersionIndex: 3835
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []

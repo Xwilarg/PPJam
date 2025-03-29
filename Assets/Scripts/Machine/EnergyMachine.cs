@@ -11,9 +11,6 @@ namespace PPJam.Machine
         [SerializeField]
         private EnergyInfo _info;
 
-        [SerializeField]
-        private TubeSendingMachine _associatedMachine;
-
         public EnergyInfo Info => _info;
 
         public GameObject GameObject => gameObject;
@@ -28,15 +25,6 @@ namespace PPJam.Machine
         private void Start()
         {
             GameManager.Instance.Register(this);
-        }
-
-        private void OnDrawGizmos()
-        {
-            if (_associatedMachine != null)
-            {
-                Gizmos.color = Color.green;
-                Gizmos.DrawLine(transform.position, _associatedMachine.transform.position);
-            }
         }
     }
 }
