@@ -1,7 +1,10 @@
 using PPJam.Manager;
 using PPJam.Payer;
 using PPJam.Player;
+using PPJam.Prop;
 using PPJam.SO;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace PPJam.Machine
@@ -14,6 +17,10 @@ namespace PPJam.Machine
         [SerializeField]
         private EnergyInfo _info;
 
+        [SerializeField]
+        private GameObject[] _attachedProps;
+        private IEnumerable<ISwitchable> _props;
+
         private bool _isBroken;
 
         public EnergyInfo Info => _info;
@@ -25,8 +32,14 @@ namespace PPJam.Machine
         public void Interact(PlayerController pc)
         {
             _isBroken = false;
+            foreach (var p in _props) p.Toggle(true);
             GameManager.Instance.Repair(_info.Name);
             pc.EmptyHands();
+        }
+
+        private void Awake()
+        {
+            _props = _attachedProps.Select(x => x.GetComponent<ISwitchable>());
         }
 
         private void Start()
@@ -37,6 +50,7 @@ namespace PPJam.Machine
         public void Break()
         {
             _isBroken = true;
+            foreach (var p in _props) p.Toggle(false);
         }
     }
 }
