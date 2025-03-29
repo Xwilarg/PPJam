@@ -1235,7 +1235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _info: {fileID: 11400000, guid: 5f1e2aa7979136340a814f78297c2de3, type: 2}
-  _handsTransform: {fileID: 247570193}
+  _handsTransform: {fileID: 243132788}
   _head: {fileID: 1556046608}
 --- !u!1 &655288045
 GameObject:

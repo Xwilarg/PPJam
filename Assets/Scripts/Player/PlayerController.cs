@@ -111,6 +111,11 @@ namespace PPJam.Payer
             _controller.Move(moveDir * _info.MovementSpeed * Time.deltaTime);
         }
 
+        private void OnGUI()
+        {
+            GUI.Label(new Rect(10f, 10f, 400f, 400f), $"Interaction count: {_interactions.Count}");
+        }
+
         public void OnMovement(InputAction.CallbackContext value)
         {
             _mov = value.ReadValue<Vector2>().normalized;
