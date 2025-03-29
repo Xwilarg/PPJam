@@ -113,7 +113,9 @@ namespace PPJam.Payer
 
         private void OnGUI()
         {
+#if UNITY_EDITOR
             GUI.Label(new Rect(10f, 10f, 400f, 400f), $"Interaction count: {_interactions.Count}");
+#endif
         }
 
         public void OnMovement(InputAction.CallbackContext value)
