@@ -56,6 +56,12 @@ namespace PPJam.Payer
             get => _carriedObject;
         }
 
+        public void EmptyHands()
+        {
+            Destroy(CarriedObject.GameObject);
+            CarriedObject = null;
+        }
+
         private void Awake()
         {
             _controller = GetComponent<CharacterController>();

@@ -15,8 +15,7 @@ namespace PPJam.Machine
 
         public void Interact(PlayerController pc)
         {
-            Destroy(pc.CarriedObject.GameObject);
-            pc.CarriedObject = null;
+            pc.EmptyHands();
         }
     }
 }

@@ -25,6 +25,7 @@ namespace PPJam.Machine
         public void Interact(PlayerController pc)
         {
             _isBroken = false;
+            pc.EmptyHands();
         }
 
         private void Start()

@@ -35,8 +35,7 @@ namespace PPJam.Machine
         {
             if (_sendingState == SendingState.PendingUser)
             {
-                Destroy(pc.CarriedObject.GameObject);
-                pc.CarriedObject = null;
+                pc.EmptyHands();
 
                 _sendingState = SendingState.Sending;
                 StartCoroutine(PlayTimer());
