@@ -8,6 +8,18 @@ using UnityEngine.InputSystem;
 
 namespace PPJam.Payer
 {
+    public record CarriedObject
+    {
+        public GameObject GameObject;
+        public ObjectType Type;
+    }
+
+    public enum ObjectType
+    {
+        Drone,
+        Repair
+    }
+
     public class PlayerController : MonoBehaviour
     {
         [SerializeField]
@@ -24,6 +36,8 @@ namespace PPJam.Payer
         private Vector2 _mov;
 
         private List<IInteractable> _interactions = new();
+
+        public GameObject CarriedObject { set; get; }
 
         private void Awake()
         {
@@ -113,7 +127,7 @@ namespace PPJam.Payer
 
         public void OnInteract(InputAction.CallbackContext value)
         {
-            if (value.phase == InputActionPhase.Started && _interactions.Any() && _interactions[0].CanInteract)
+            if (value.phase == InputActionPhase.Started && _interactions.Any() && _interactions[0].CanInteract(this))
             {
                 _interactions[0].Interact(this);
             }

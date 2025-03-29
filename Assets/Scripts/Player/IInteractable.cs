@@ -5,8 +5,8 @@ namespace PPJam.Player
 {
     public interface IInteractable
     {
-        public bool CanInteract { get; }
         public GameObject GameObject { get; }
+        public bool CanInteract(PlayerController pc);
         public void Interact(PlayerController pc);
     }
 }

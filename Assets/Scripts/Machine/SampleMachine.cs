@@ -6,7 +6,7 @@ namespace PPJam.Machine
 {
     public class SampleMachine : MonoBehaviour, IInteractable
     {
-        public bool CanInteract => true;
+        public bool CanInteract(PlayerController pc) => pc.CarriedObject == null;
         public GameObject GameObject => gameObject;
 
         public void Interact(PlayerController pc)
