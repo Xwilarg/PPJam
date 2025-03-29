@@ -26,6 +26,9 @@ namespace PPJam.Payer
         private PlayerInfo _info;
 
         [SerializeField]
+        private Transform _handsTransform;
+
+        [SerializeField]
         private Transform _head;
         private float _headRotation;
 
@@ -37,7 +40,20 @@ namespace PPJam.Payer
 
         private List<IInteractable> _interactions = new();
 
-        public GameObject CarriedObject { set; get; }
+        private CarriedObject _carriedObject;
+        public CarriedObject CarriedObject
+        {
+            set
+            {
+                _carriedObject = value;
+                if (value != null)
+                {
+                    _carriedObject.GameObject.transform.parent = _handsTransform;
+                    _carriedObject.GameObject.transform.localPosition = Vector3.zero;
+                }
+            }
+            get => _carriedObject;
+        }
 
         private void Awake()
         {
